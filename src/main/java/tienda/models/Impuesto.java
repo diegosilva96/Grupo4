@@ -5,7 +5,7 @@ public class Impuesto {
     public void CalcularImpuesto(Pedido order) {
 
         System.out.println("Calculando impuesto");
-        int i = 0;
+
     }
 
 }
