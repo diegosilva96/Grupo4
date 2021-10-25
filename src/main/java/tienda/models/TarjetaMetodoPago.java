@@ -15,12 +15,12 @@ public class TarjetaMetodoPago implements MetodoPago{
 
     public void TarjetaPayOrder(Pedido order){
         /* Doing Tarjeta Validation */
-        System.out.println("Procesando el pago con Banco "+getTarjetaId()+" | total: "+order.getMontoTotal() + " comision: " +this.devolverComision(order.getMontoTotal()));
+        System.out.println("Procesando el pago con Tarjeta "+getTarjetaId()+" | total: "+order.getMontoTotal() + " comision: " +this.devolverComision(order.getMontoTotal()));
     }
 
     public String getTarjetaId() {
         if(this.TarjetaId == null){
-            setTarjetaId("D5P000000000000");
+            setTarjetaId("A000l00000000000");
         }
         return TarjetaId;
     }
