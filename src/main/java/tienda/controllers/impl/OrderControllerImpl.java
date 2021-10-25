@@ -4,6 +4,7 @@ import tienda.config.Paths;
 import tienda.controllers.OrderController;
 import tienda.models.BancoMetodoPago;
 import tienda.models.BlockChainMetodoPago;
+import tienda.models.TarjetaMetodoPago;
 import tienda.models.Cliente;
 import tienda.models.Pedido;
 import tienda.models.impl.PedidoDetalleInternet;
@@ -54,7 +55,9 @@ public class OrderControllerImpl implements OrderController {
 
         //MetodoPago paymentMethod = new MetodoPago();
         //BlockChainMetodoPago paymentMethod = new BlockChainMetodoPago();
-        BancoMetodoPago paymentMethod = new BancoMetodoPago();
+        //BancoMetodoPago paymentMethod = new BancoMetodoPago();
+        TarjetaMetodoPago paymentMethod = new TarjetaMetodoPago();
+
         order.pagar(paymentMethod);
 
         Cliente cliObj = (Cliente)customerRepository.find("616f797ea7539a581e64e7e8");
