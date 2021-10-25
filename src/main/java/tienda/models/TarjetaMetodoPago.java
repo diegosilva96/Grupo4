@@ -15,7 +15,7 @@ public class TarjetaMetodoPago implements MetodoPago{
 
     public void TarjetaPayOrder(Pedido order){
         /* Doing Tarjeta Validation */
-        System.out.println("Procesando el pago con Banco "+getTarjetaId()+" | total: "+order.getMontoTotal() + " comision: " +devolverComision(order.getMontoTotal()));
+        System.out.println("Procesando el pago con Banco "+getTarjetaId()+" | total: "+order.getMontoTotal() + " comision: " +this.devolverComision(order.getMontoTotal()));
     }
 
     public String getTarjetaId() {

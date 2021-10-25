@@ -20,7 +20,7 @@ public class BlockChainMetodoPago implements MetodoPago {
 
     public void walletPayOrder(Pedido order){
         /* Doing Blok Chain Validation */
-        System.out.println("Procesando el pago con wallet "+getWalletId()+" | total: "+order.getMontoTotal() + " comision: " +devolverComision(order.getMontoTotal()));
+        System.out.println("Procesando el pago con wallet "+getWalletId()+" | total: "+order.getMontoTotal() + " comision: " +this.devolverComision(order.getMontoTotal()));
     }
 
     public String getWalletId() {

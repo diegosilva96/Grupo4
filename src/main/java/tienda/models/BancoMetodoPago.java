@@ -15,7 +15,7 @@ public class BancoMetodoPago implements MetodoPago {
 
     public void bankPayOrder(Pedido order){
         /* Doing Bank Validation */
-        System.out.println("Procesando el pago con Banco "+getBankId()+" | total: "+order.getMontoTotal() + " comision: " +devolverComision(order.getMontoTotal()));
+        System.out.println("Procesando el pago con Banco "+getBankId()+" | total: "+order.getMontoTotal() + " comision: " +this.devolverComision(order.getMontoTotal()));
     }
 
     public String getBankId() {
