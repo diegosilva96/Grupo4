@@ -1,20 +1,21 @@
 package tienda.models;
 
-public class BancoMetodoPago extends MetodoPago {
+public class BancoMetodoPago implements MetodoPago {
 
     private String bankId;
-    private Double comision;
-
+    
     @Override
     public  void pagarPedido(Pedido order){
         bankPayOrder(order);
     }
 
+    public double devolverComision(Double montoTotal){
+        return montoTotal*0.15;
+    }
+
     public void bankPayOrder(Pedido order){
-        
-        comision = order.getMontoTotal() * 0.15;
-        /* Doing Blok Chain Validation */
-        System.out.println("Procesando el pago con Banco "+getBankId()+" | total: "+order.getMontoTotal() + " comision: " +comision);
+        /* Doing Bank Validation */
+        System.out.println("Procesando el pago con Banco "+getBankId()+" | total: "+order.getMontoTotal() + " comision: " +devolverComision(order.getMontoTotal()));
     }
 
     public String getBankId() {

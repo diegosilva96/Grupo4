@@ -4,21 +4,23 @@ import com.fasterxml.uuid.Generators;
 
 import java.util.UUID;
 
-public class BlockChainMetodoPago extends MetodoPago {
+public class BlockChainMetodoPago implements MetodoPago {
 
     private String walletId;
-    private Double comision;
+    
 
     @Override
     public  void pagarPedido(Pedido order){
         walletPayOrder(order);
     }
 
+    public double devolverComision(Double montoTotal){
+        return montoTotal*0.05;
+    }
+
     public void walletPayOrder(Pedido order){
-        
-        comision = order.getMontoTotal() * 0.05;
         /* Doing Blok Chain Validation */
-        System.out.println("Procesando el pago con wallet "+getWalletId()+" | total: "+order.getMontoTotal() + " comision: " +comision);
+        System.out.println("Procesando el pago con wallet "+getWalletId()+" | total: "+order.getMontoTotal() + " comision: " +devolverComision(order.getMontoTotal()));
     }
 
     public String getWalletId() {
