@@ -7,7 +7,7 @@ public class Producto {
     private Double precio;
     private String unidadMedida;
     private String marca;
-    private String cantidadMaxima;
+    private int cantidadMaxima;
     
     public Producto() {}
 
@@ -43,11 +43,11 @@ public class Producto {
         this.marca = marca;
     }
 
-    public String getCantidadMaxima() {
+    public int getCantidadMaxima() {
         return cantidadMaxima;
     }
 
-    public void setCantidadMaxima(String cantidadMaxima) {
+    public void setCantidadMaxima(int cantidadMaxima) {
         this.cantidadMaxima = cantidadMaxima;
     }
 
